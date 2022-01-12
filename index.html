@@ -1,33 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Huddle landing page with single introductory section</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
+
 <body>
-
-  Build The Community Your Fans Will Love
-
-  Huddle re-imagines the way we build communities. You have a voice, but so does your audience. 
-  Create connections with your users as you engage in genuine discussion. 
-
-  Register
-
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
+  <div class="huddle">
+    <header class="huddle-header">
+      <div class="huddle-container">
+        <div class="huddle-header__logo">
+          <img src="images/logo.svg" alt="typing message" class="huddle-header__logo-img">
+          <h1 class="huddle-header__logo-title">
+            <a class="huddle-header__logo-title__text" href="#">Huddle</a>
+          </h1>
+        </div>
+      </div>
+    </header>
+    <main class="huddle-main">
+      <div class="huddle-container">
+        <img src="images/illustration-mockups.svg" alt="design chat" class="huddle-main__img">
+        <article class="huddle-main__article">
+          <h2 class="huddle-main__article-title">Build The Community Your Fans Will Love</h2>
+          <p class="huddle-main__article-text">
+            Huddle re-imagines the way we build communities. You have a voice, but so does your audience.
+            Create connections with your users as you engage in genuine discussion.
+          </p>
+        </article>
+        <button type="button" class="huddle-main__btn">Register</button>
+      </div>
+    </main>
+    <footer class="huddle-footer">
+      <div class="huddle-container">
+        <ul class="huddle-footer__social">
+          <li class="huddle-footer__social-item"><a href="#" class="huddle-footer__social-item__link">facebook</a></li>
+          <li class="huddle-footer__social-item"><a href="#" class="huddle-footer__social-item__link">twitter</a></li>
+          <li class="huddle-footer__social-item"><a href="#" class="huddle-footer__social-item__link">instagram</a></li>
+        </ul>
+        <div class="huddle-footer__copy">
+          <p class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+            Coded by <a href="https://github.com/SuhodolecA" target="_blank">Anton Sukhadolets</a>.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
 </body>
+
 </html>
