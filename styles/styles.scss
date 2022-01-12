@@ -20,6 +20,10 @@ body {
     background: $violet url('/images/bg-desktop.svg') no-repeat center center / cover;
 }
 
+.huddle {
+    height: 100vh;
+}
+
 .huddle-container {
     max-width: 1315px;
     margin: 0 auto;
@@ -34,4 +38,20 @@ a {
     display: inline-block;
     text-decoration: none;
 }
+
 // === / common styles ===
+
+// === huddle-header ===
+.huddle-header {
+    margin-top: 50px;
+    position: relative;
+
+    &__title {
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: hsla(100, 100%, 100%, 0);
+        user-select: none;
+    }
+}
+// === / huddle-header ===

@@ -16,6 +16,10 @@ body {
   background: #674baf url("/images/bg-desktop.svg") no-repeat center center/cover;
 }
 
+.huddle {
+  height: 100vh;
+}
+
 .huddle-container {
   max-width: 1315px;
   margin: 0 auto;
@@ -29,5 +33,21 @@ ul {
 a {
   display: inline-block;
   text-decoration: none;
+}
+
+.huddle-header {
+  margin-top: 50px;
+  position: relative;
+}
+
+.huddle-header__title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: rgba(255, 255, 255, 0);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 /*# sourceMappingURL=styles.css.map */
