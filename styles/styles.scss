@@ -1,6 +1,7 @@
 // === variables ===
 $violet: hsl(257, 40%, 49%);
 $soft-magneta: hsl(300, 69%, 71%);
+$soft-magneta-active: hsl(300, 69%, 61%);
 // === / variables ===
 
 // === common styles ===
@@ -15,8 +16,8 @@ $soft-magneta: hsl(300, 69%, 71%);
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
     font-family: 'Poppins', sans-serif;
+    font-weight: 400;
     background: $violet url('/images/bg-desktop.svg') no-repeat center center / cover;
 }
 
@@ -46,6 +47,20 @@ a {
     margin-top: 50px;
     position: relative;
 
+        &__logo-img {
+            width: 100%;
+            height: 100%;
+            transition: transform .3s ease-in-out;
+            @media(max-width: 600px) {
+                width: 70%;
+            }
+
+            &:hover {
+                animation: anim .5s linear infinite;
+            }
+
+        }
+
     &__title {
         position: absolute;
         top: 0;
@@ -55,3 +70,83 @@ a {
     }
 }
 // === / huddle-header ===
+
+// ===  huddle-main ===
+.huddle-main {
+    margin-top: 100px;
+    color: hsl(100, 100%, 100%);
+
+    .huddle-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__img {
+        flex-basis: 55%;
+    }
+
+    &__register {
+        padding-left: 10px;
+        flex-basis: 40%;
+        margin-top: 50px;
+
+        &-article-title {
+            font-weight: 600;
+            font-size: 40px;
+            line-height: 1.5;
+        }
+
+        &-article-text {
+            margin: 25px 0;
+            line-height: 1.6;
+            color: hsla(100, 100%, 100%, .8);
+        }
+
+        &-btn {
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            max-width: 200px;
+            width: 100%;
+            text-align: center;
+            padding: 15px 0;
+            color: $violet;
+            cursor: pointer;
+            border-radius: 30px;
+            background: hsl(100, 100%, 100%);
+            border: 0;
+            box-shadow: 0px 0px 15px hsla(0,0%,0%, .8);
+            transition: all .3s linear;
+
+            &:hover {
+                background: $soft-magneta;
+                color: hsl(100, 100%, 100%);
+            }
+
+            &:active {
+                background: $soft-magneta-active;
+                color: hsl(100, 100%, 100%);
+            }
+        }
+    }
+
+}
+// === / huddle-main ===
+
+
+
+
+// === animations ===
+@keyframes anim {
+    0% {transform: skewX(0deg)}
+    10% {transform: skewX(.5deg)}
+    20% {transform: skewX(1deg)}
+    30% {transform: skewX(1.5deg)}
+    40% {transform: skewX(1deg)}
+    50% {transform: skewX(.5deg)}
+    60% {transform: skewX(0deg)}
+    70% {transform: skewX(-.5deg)}
+    80% {transform: skewX(-1deg)}
+    90% {transform: skewX(-1.5deg)}
+    100% {transform: skewX(0deg)}
+}
+// === /animations ===

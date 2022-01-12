@@ -11,8 +11,8 @@
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
   font-family: 'Poppins', sans-serif;
+  font-weight: 400;
   background: #674baf url("/images/bg-desktop.svg") no-repeat center center/cover;
 }
 
@@ -40,6 +40,26 @@ a {
   position: relative;
 }
 
+.huddle-header__logo-img {
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+}
+
+@media (max-width: 600px) {
+  .huddle-header__logo-img {
+    width: 70%;
+  }
+}
+
+.huddle-header__logo-img:hover {
+  -webkit-animation: anim .5s linear infinite;
+          animation: anim .5s linear infinite;
+}
+
 .huddle-header__title {
   position: absolute;
   top: 0;
@@ -49,5 +69,165 @@ a {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+
+.huddle-main {
+  margin-top: 100px;
+  color: white;
+}
+
+.huddle-main .huddle-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.huddle-main__img {
+  -ms-flex-preferred-size: 55%;
+      flex-basis: 55%;
+}
+
+.huddle-main__register {
+  padding-left: 10px;
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+  margin-top: 50px;
+}
+
+.huddle-main__register-article-title {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 1.5;
+}
+
+.huddle-main__register-article-text {
+  margin: 25px 0;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.huddle-main__register-btn {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  max-width: 200px;
+  width: 100%;
+  text-align: center;
+  padding: 15px 0;
+  color: #674baf;
+  cursor: pointer;
+  border-radius: 30px;
+  background: white;
+  border: 0;
+  -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
+          box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
+.huddle-main__register-btn:hover {
+  background: #e882e8;
+  color: white;
+}
+
+.huddle-main__register-btn:active {
+  background: #e057e0;
+  color: white;
+}
+
+@-webkit-keyframes anim {
+  0% {
+    -webkit-transform: skewX(0deg);
+            transform: skewX(0deg);
+  }
+  10% {
+    -webkit-transform: skewX(0.5deg);
+            transform: skewX(0.5deg);
+  }
+  20% {
+    -webkit-transform: skewX(1deg);
+            transform: skewX(1deg);
+  }
+  30% {
+    -webkit-transform: skewX(1.5deg);
+            transform: skewX(1.5deg);
+  }
+  40% {
+    -webkit-transform: skewX(1deg);
+            transform: skewX(1deg);
+  }
+  50% {
+    -webkit-transform: skewX(0.5deg);
+            transform: skewX(0.5deg);
+  }
+  60% {
+    -webkit-transform: skewX(0deg);
+            transform: skewX(0deg);
+  }
+  70% {
+    -webkit-transform: skewX(-0.5deg);
+            transform: skewX(-0.5deg);
+  }
+  80% {
+    -webkit-transform: skewX(-1deg);
+            transform: skewX(-1deg);
+  }
+  90% {
+    -webkit-transform: skewX(-1.5deg);
+            transform: skewX(-1.5deg);
+  }
+  100% {
+    -webkit-transform: skewX(0deg);
+            transform: skewX(0deg);
+  }
+}
+
+@keyframes anim {
+  0% {
+    -webkit-transform: skewX(0deg);
+            transform: skewX(0deg);
+  }
+  10% {
+    -webkit-transform: skewX(0.5deg);
+            transform: skewX(0.5deg);
+  }
+  20% {
+    -webkit-transform: skewX(1deg);
+            transform: skewX(1deg);
+  }
+  30% {
+    -webkit-transform: skewX(1.5deg);
+            transform: skewX(1.5deg);
+  }
+  40% {
+    -webkit-transform: skewX(1deg);
+            transform: skewX(1deg);
+  }
+  50% {
+    -webkit-transform: skewX(0.5deg);
+            transform: skewX(0.5deg);
+  }
+  60% {
+    -webkit-transform: skewX(0deg);
+            transform: skewX(0deg);
+  }
+  70% {
+    -webkit-transform: skewX(-0.5deg);
+            transform: skewX(-0.5deg);
+  }
+  80% {
+    -webkit-transform: skewX(-1deg);
+            transform: skewX(-1deg);
+  }
+  90% {
+    -webkit-transform: skewX(-1.5deg);
+            transform: skewX(-1.5deg);
+  }
+  100% {
+    -webkit-transform: skewX(0deg);
+            transform: skewX(0deg);
+  }
 }
 /*# sourceMappingURL=styles.css.map */
