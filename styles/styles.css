@@ -1,0 +1,33 @@
+:root {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  background: #674baf url("/images/bg-desktop.svg") no-repeat center center/cover;
+}
+
+.huddle-container {
+  max-width: 1315px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+/*# sourceMappingURL=styles.css.map */

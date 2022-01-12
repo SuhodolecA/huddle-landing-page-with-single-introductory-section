@@ -1,0 +1,37 @@
+// === variables ===
+$violet: hsl(257, 40%, 49%);
+$soft-magneta: hsl(300, 69%, 71%);
+// === / variables ===
+
+// === common styles ===
+:root {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    background: $violet url('/images/bg-desktop.svg') no-repeat center center / cover;
+}
+
+.huddle-container {
+    max-width: 1315px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+// === / common styles ===
