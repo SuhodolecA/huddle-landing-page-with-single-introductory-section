@@ -19,10 +19,16 @@ body {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     background: $violet url('/images/bg-desktop.svg') no-repeat center center / cover;
+
+    @media(max-width: 600px) {
+        background: $violet url('/images/bg-mobile.svg') no-repeat center center / cover;
+    }
 }
 
 .huddle {
     height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .huddle-container {
@@ -55,6 +61,10 @@ a {
                 width: 70%;
             }
 
+            @media(max-width: 400px) {
+                width: 50%;
+            }
+
             &:hover {
                 animation: anim .5s linear infinite;
             }
@@ -74,11 +84,21 @@ a {
 // ===  huddle-main ===
 .huddle-main {
     margin-top: 100px;
+    margin-bottom: 25px;
     color: hsl(100, 100%, 100%);
+
+    @media(max-width: 1100px) {
+        margin-bottom: 80px;
+    }
 
     .huddle-container {
         display: flex;
         justify-content: space-between;
+
+        @media(max-width: 1100px) {
+            flex-direction: column;
+            text-align: center;
+        }
     }
 
     &__img {
@@ -94,12 +114,25 @@ a {
             font-weight: 600;
             font-size: 40px;
             line-height: 1.5;
+
+            @media(max-width: 600px) {
+                font-size: 30px;
+            }
+
+            @media(max-width: 600px) {
+                font-size: 25px;
+            }
         }
 
         &-article-text {
             margin: 25px 0;
             line-height: 1.6;
             color: hsla(100, 100%, 100%, .8);
+
+            
+            @media(max-width: 600px) {
+                font-size: 15.5px;
+            }
         }
 
         &-btn {
@@ -117,6 +150,10 @@ a {
             box-shadow: 0px 0px 15px hsla(0,0%,0%, .8);
             transition: all .3s linear;
 
+            @media(max-width: 600px) {
+                max-width: 400px;
+            }
+
             &:hover {
                 background: $soft-magneta;
                 color: hsl(100, 100%, 100%);
@@ -132,7 +169,56 @@ a {
 }
 // === / huddle-main ===
 
+// ===  huddle-footer ===
+.huddle-footer {
+    margin-top: auto;
+    .huddle-container {
+        display: flex;
+        flex-direction: column;
+    }
 
+    &__social {
+        margin-left: auto;
+        display: flex;
+        margin-bottom: 25px;
+
+        @media(max-width: 1100px) {
+            margin: 25px auto;
+        }
+
+        &-item+&-item {
+            margin-left: 15px;
+        }
+
+        &-item__link {
+            font-size: 0;
+            color: hsl(100, 100%, 100%);
+            width: 40px;
+            height: 40px;
+            border: 1px solid hsl(100, 100%, 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all .3s ease;
+
+            &:hover {
+                color: $soft-magneta;
+                border-color: $soft-magneta;
+            }
+
+            &:active {
+                color: $soft-magneta-active;
+                border-color: $soft-magneta-active;
+            }
+        }
+
+        .fab {
+            font-size: 18px;
+        }
+    }
+}
+// === / huddle-footer ===
 
 
 // === animations ===
